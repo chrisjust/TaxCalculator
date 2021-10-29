@@ -7,13 +7,13 @@ var employee = new Employee(employeeId, grossIncome);
 // Calculate method
 //Current salary
 var yearZero = TaxCalculation.Calculate(employee, taxPercentage);
+Console.WriteLine("---------------");
+Console.WriteLine(yearZero);
+Console.WriteLine("---------------");
 //After 1 year with GradeA
 employee.Increment(Grade.A);
 var yearOne = TaxCalculation.Calculate(employee);
 // Print it out
-Console.WriteLine("---------------");
-Console.WriteLine(yearZero);
-Console.WriteLine("---------------");
 Console.WriteLine(yearOne);
 Console.WriteLine("---------------");
 
