@@ -9,12 +9,11 @@ var employee = new Employee(employeeId, grossIncome);
 //After 1 year with GradeA
 for (int i = 0; i < 5; i++)
 {
-var yearZero = TaxCalculation.Calculate(employee, taxPercentage);
-Console.WriteLine("---------------");
-Console.WriteLine(yearZero);
-Console.WriteLine("---------------");
-employee.Increment(Grade.A);
-
+    var yearZero = TaxCalculation.Calculate(employee, taxPercentage);
+    Console.WriteLine("---------------");
+    Console.WriteLine(yearZero);
+    Console.WriteLine("---------------");
+    employee.Increment(Grade.A);
 }
 
 public class TaxCalculation
