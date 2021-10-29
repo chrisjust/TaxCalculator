@@ -4,7 +4,6 @@ var grossIncome = 15000;
 var taxPercentage = 25M / 100M;
 // The employee
 var employee = new Employee(employeeId, grossIncome);
-
 // Calculate method
 //Current salary
 var yearZero = TaxCalculation.Calculate(employee, taxPercentage);
