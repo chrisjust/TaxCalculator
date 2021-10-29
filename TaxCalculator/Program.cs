@@ -6,16 +6,16 @@ var taxPercentage = 25M / 100M;
 var employee = new Employee(employeeId, grossIncome);
 // Calculate method
 //Current salary
+//After 1 year with GradeA
+for (int i = 0; i < 5; i++)
+{
 var yearZero = TaxCalculation.Calculate(employee, taxPercentage);
 Console.WriteLine("---------------");
 Console.WriteLine(yearZero);
 Console.WriteLine("---------------");
-//After 1 year with GradeA
 employee.Increment(Grade.A);
-var yearOne = TaxCalculation.Calculate(employee);
-// Print it out
-Console.WriteLine(yearOne);
-Console.WriteLine("---------------");
+
+}
 
 public class TaxCalculation
 {
@@ -24,11 +24,13 @@ public class TaxCalculation
     public TaxCalculation(Employee employee, decimal taxPercentage = 25m / 100m)
     {
         Employee = employee;
+        Salary = Employee.Salary;
         TaxPercentage = taxPercentage;
-        TaxAmount = CalculateTaxAmount(employee.Salary);
-        NetPay = CalculateNetPay(employee.Salary);
+        TaxAmount = CalculateTaxAmount(Salary);
+        NetPay = CalculateNetPay(Salary);
     }
     public Employee Employee { get; set; }
+    public decimal Salary { get; set; }
     public decimal TaxPercentage { get; set; }
     public decimal TaxAmount { get; set; }
     public decimal NetPay { get; set; }
